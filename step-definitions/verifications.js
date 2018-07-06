@@ -26,7 +26,5 @@ Then ('Go button {string} with text {string} is displayed', (locator, text)=> {
     const elem = element(by.cssContainingText(locator, text));
     return expect(elem.isDisplayed()).to.eventually.equal(true);
 Then('Attribute {string} of field {string} is equal to {string}', (locator, result) => {
-    return element = element(by.css(locator)){
-        return expect(elem.getAttribute()).to.equal(string);
-    }
-    }
+
+
