@@ -1,0 +1,26 @@
+{
+  "name": "test-framework-Olga",
+  "version": "1.0.0",
+  "description": "check calculator",
+  "keywords": [
+    "Protractor",
+    "Cucumber"
+  ],
+  "author": "Olga Lyubchynska <gay_o@ukr.net>",
+  "license": "MIT",
+  "repository": "",
+  "devDependencies": {
+    "protractor": "5.3.1",
+    "protractor-jasmine2-screenshot-reporter": "0.5.0",
+    "chai": "4.1.2",
+    "chai-as-promised": "7.1.1",
+    "cucumber": "4.1.0",
+    "protractor-cucumber-framework": "^5.0.0",
+    "cucumber-html-reporter": "^4.0.2"
+  },
+  "scripts": {
+    "webdriver-update": "webdriver-manager update",
+    "webdriver": "webdriver-manager start",
+    "test": "protractor conf.js"
+  }
+}
