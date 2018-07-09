@@ -14,6 +14,8 @@ Feature: test-feature
     Then Result "h2" is equal to "0.75"
     Then Go button "button#gobutton.btn" is displayed
     Then Go button "button#gobutton.btn" with text "Go!" is displayed
+    Then Go button "button#gobutton.btn" contains "Go" text
+
 
 
 

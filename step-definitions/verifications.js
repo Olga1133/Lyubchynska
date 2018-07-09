@@ -23,6 +23,12 @@ Then ('Go button {string} with text {string} is displayed', (locator, text)=> {
     return expect(elem.isDisplayed()).to.eventually.equal(true);
 
 });
+Then ('Go button {string} contains {string} text', (locator, text)=> {
+    const elem = element(by.cssContainingText(locator, text));
+    return expect(elem.getText()).to.eventually.contains(text);
+});
+
+
 
 
 
