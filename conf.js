@@ -1,6 +1,4 @@
-
-
-exports.config =  {
+exports.config = {
     seleniumAddress: 'http://127.0.0.1:4444/wd/hub',
     getPageTimeout: 60000, //60 sec
     allScriptsTimeout: 60000,//60 seconds
@@ -19,11 +17,27 @@ exports.config =  {
     ],
 
     cucumberOpts: {
-        require: ['step-definitions/*.js']
+        require: ['step-definitions/*.js', 'support/hooks.js'],
+        keepAlive: false,
+        format: ['json:reports/results.json', 'progress'],
+        strict: true,
     },
+    plugins: [{
+        package: 'protractor-multiple-cucumber-html-reporter-plugin',
+        options: {
+            // read the options part https://www.npmjs.com/package/protractor-multiple-cucumber-html-reporter-plugin#options
+            automaticallyGenerateReport: true,
+            displayDuration: true,
+            durationInMS: true,
+            saveCollectedJSON: true
+        }
+    }],
 
     onComplete: function () {
         browser.quit();
     }
 };
+
+
+
 
